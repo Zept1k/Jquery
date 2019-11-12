@@ -103,11 +103,17 @@ label {
 
 }
 label[for="red"] {
+    text-decoration-color: red;
+    color:red;
     background-color: red;
 }
 label[for="green"] {
+    text-decoration-color: green;
+    color:green;
     background-color: green;
 }
 label[for="blue"] {
+    text-decoration-color: blue;
+    color:blue;
     background-color: blue;
 }

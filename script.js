@@ -8,6 +8,9 @@ $(document).ready(function(){
     const $list = $("#list");
     //not in DOM yet
     //const $checkbox = $('checkbox');
+
+    console.log($radio, '1');
+    console.log($radio, '2');
     //Random color for new item
     function getRandomColor() {
         const letters = '0123456789ABCDEF';
@@ -40,11 +43,11 @@ $(document).ready(function(){
 });
 
 // ============= Color picker (possilble prob with css? - fixed)
-//======== doesn't work
-// $radio.change(function() {
-//     color = $(this).val();
-//     console.log(color);
-// });
+// ======== doesn't work
+$radio.click(function() {
+    color = $(this).val();
+    console.log(color);
+});
 
 // ========================= WORKS =================
 // if ('content' in document.createElement('template')) {
