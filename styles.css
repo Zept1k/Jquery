@@ -1,0 +1,113 @@
+body {
+    background: #161616;
+    color: #bdbdbd;
+    font-weight: 300;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Helvetica neue, roboto;
+}
+
+#container {
+    background-color: white;
+    height: 50px;
+    /*Probably hide next one*/
+    width: 420px;
+}
+
+#itemDescribe {
+    height: 88%;
+    font-size: 25px;
+    border: 0;
+    outline:none;
+}
+
+#addButton {
+    height: 75%;
+    width: 10%;
+    border: 0;
+    color: white;
+    background-color: #10cc8a;
+    border-radius: 5px;
+    outline:none;
+}
+input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/* Flex Sandbox for list */
+/* #list {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+     } */
+/* td {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    } */
+
+td {
+    /* width: 207px; */
+    border: 1px solid white;
+    color: black;
+}
+#list {
+    margin: 0;
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 419px;
+    margin-top: 4px;
+}
+label {
+    outline:none;
+    cursor:pointer;
+    height: 10px;
+    width: 10px;
+
+}
+label[for="red"] {
+    background-color: red;
+}
+label[for="green"] {
+    background-color: green;
+}
+label[for="blue"] {
+    background-color: blue;
+}
