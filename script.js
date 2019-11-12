@@ -1,16 +1,14 @@
 $(document).ready(function(){
 
     //Initializing a variables
-    const pickedColor = "white";
+    let pickedColor = "white";
     const $name = $("#itemDescribe");
     const $button = $("#addButton");
-    const $radio = $("label");;
+    const $radio = $('#colorPicker');
     const $list = $("#list");
     //not in DOM yet
     //const $checkbox = $('checkbox');
 
-    console.log($radio, '1');
-    console.log($radio, '2');
     //Random color for new item
     function getRandomColor() {
         const letters = '0123456789ABCDEF';
@@ -23,30 +21,37 @@ $(document).ready(function(){
 
 //Colorize item
     function ClickHandler(){
+        console.log(this);
         if ($(this).css('background-color') != $(this).next().css('background-color')) {
-            return false
         } else {
-            return $(this).css('background-color', pickedColor).next().css('background-color', pickedColor)
+            $(this).css('background-color', pickedColor).next().css('background-color', pickedColor)
+            // console.log($("input[type='checkbox']").attr('value'))
+            // $(':checkbox').val(':checkbox'.checked = true )
         }
+    }
+// ============= Color picker (possible prob with css? - fixed)
+    function colorPick(){
+        let color =  $(this).attr('value');
+        console.log(this,'XXXXXXXXXXXXXXXX',  $(this).attr('value'));
+        return pickedColor = color;
     }
 //Create new item
     function CreateItem(){
         let newColor = getRandomColor();
-        const newItemCheck = $("<td bgcolor=" + `${newColor}` + "><input type='checkbox'></td>");
+        const newItemCheck = $("<td bgcolor=" + `${newColor} width="40px"` + "><input type='checkbox'></td>");
         const newItemText = $("<td bgcolor=" + `${newColor}` + "></td>").text($name.val());
         $list.append( $("<tr>"), newItemCheck, newItemText, $("</tr>"));
         return console.log('New item added to list: ', $name.val(), 'With color: ', newColor);
     }
+
+    // $('label').click(function(){
+    //     console.log('We were here!');
+    // });
+
 //Main
     $button.on('click', CreateItem);
     $list.on('click', 'td', ClickHandler);
-});
-
-// ============= Color picker (possilble prob with css? - fixed)
-// ======== doesn't work
-$radio.click(function() {
-    color = $(this).val();
-    console.log(color);
+    $radio.on('click', 'label', colorPick);
 });
 
 // ========================= WORKS =================

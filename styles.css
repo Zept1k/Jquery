@@ -8,7 +8,6 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-family: Helvetica neue, roboto;
 }
 
 #container {
@@ -25,12 +24,16 @@ body {
     outline:none;
 }
 
+#colorPicker {
+    display:inline-block;
+}
+
 #addButton {
     height: 75%;
     width: 10%;
     border: 0;
     color: white;
-    background-color: #10cc8a;
+    background-color: #15ab99;
     border-radius: 5px;
     outline:none;
 }
@@ -87,15 +90,29 @@ td {
     /* width: 207px; */
     border: 1px solid white;
     color: black;
+    height: 50px;
+    font-size: 22px;
+    text-align: left;
+    align-content: center;
+    align-items: center;
+    vertical-align: middle;
+    left: 100px;
+}
+/*Doesn't work properly =( */
+input [type=checkbox] {
 }
 #list {
+    position: relative;
     margin: 0;
     border: 1px solid white;
     border-collapse: collapse;
-    width: 419px;
+    width: 100%;
     margin-top: 4px;
 }
 label {
+    --colorLabel_1: red;
+    --colorLabel_2: green;
+    --colorLabel_3: blue;
     outline:none;
     cursor:pointer;
     height: 10px;
@@ -103,17 +120,17 @@ label {
 
 }
 label[for="red"] {
-    text-decoration-color: red;
-    color:red;
-    background-color: red;
+    text-decoration-color: var(--colorLabel_1);
+    color:var(--colorLabel_1);
+    background-color: var(--colorLabel_1);
 }
 label[for="green"] {
-    text-decoration-color: green;
-    color:green;
-    background-color: green;
+    text-decoration-color: var(--colorLabel_2);
+    color:var(--colorLabel_2);
+    background-color: var(--colorLabel_2);
 }
 label[for="blue"] {
-    text-decoration-color: blue;
-    color:blue;
-    background-color: blue;
+    text-decoration-color: var(--colorLabel_3);
+    color:var(--colorLabel_3);
+    background-color: var(--colorLabel_3);
 }
