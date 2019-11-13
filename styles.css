@@ -1,6 +1,5 @@
 body {
     background: #161616;
-    color: #bdbdbd;
     font-weight: 300;
     height: 100vh;
     margin: 0;
@@ -12,16 +11,20 @@ body {
 
 #container {
     background-color: white;
-    height: 50px;
+    height: 40px;
     /*Probably hide next one*/
     width: 420px;
+    margin: 0;
+    flex-direction: column;
 }
 
 #itemDescribe {
-    height: 88%;
     font-size: 25px;
     border: 0;
     outline:none;
+    margin: 0;
+    left:0;
+
 }
 
 #colorPicker {
@@ -46,6 +49,14 @@ input[type=radio] {
     width: 0;
 }
 
+#list {
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 420px;
+}
+
 td {
     /* width: 207px; */
     border: 1px solid white;
@@ -59,44 +70,32 @@ td {
     left: 100px;
 }
 
-#list {
-    position: relative;
-    margin: 0;
-    border-radius: 4px;
-    border: 1px solid white;
-    border-collapse: collapse;
-    width: 419px;
-}
-
-label {
-    --colorLabel_1: red;
-    --colorLabel_2: green;
-    --colorLabel_3: blue;
+.colorPicker {
+    /*--colorLabel_1: red;*/
+    /*--colorLabel_2: green;*/
+    /*--colorLabel_3: blue;*/
+    display: inline-block;
     outline:none;
     cursor:pointer;
     height: 15px;
     width: 15px;
-    font-size: 20px;
 }
 
-label[for="red"] {
-    text-decoration-color: var(--colorLabel_1);
-    color:var(--colorLabel_1);
-    background-color: var(--colorLabel_1);
+.btn1  {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    display: inline-block;
 }
-
-label[for="green"] {
-    text-decoration-color: var(--colorLabel_2);
-    color:var(--colorLabel_2);
-    background-color: var(--colorLabel_2);
+.btn2  {
+    width: 15px;
+    height: 15px;
+    background-color: green;
+    display: inline-block;
 }
-
-label[for="blue"] {
-    text-decoration-color: var(--colorLabel_3);
-    color:var(--colorLabel_3);
-    background-color: var(--colorLabel_3);
+.btn3  {
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    display: inline-block;
 }
-
-/*Doesn't work properly =( */
-/*input [type=checkbox] {*/
-/*}*/

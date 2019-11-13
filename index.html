@@ -1,6 +1,5 @@
-<!--<script src="Scripts/jquery.tmpl.js" type="text/javascript"></script>-->
 <head>
-    <title>Jquery_Task</title>
+    <title>jQuery_Task</title>
     <link rel="stylesheet" href="styles.css">
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -12,12 +11,21 @@
     <div id="container">
         <input type="text" id="itemDescribe" value="Item">
         <div id="colorPicker">
-            <input type="radio" name="radio" id="color1" >
-            <label for="red" value = "red">R</label>
-            <input type="radio" name="radio" id="color2" >
-            <label for="green" value = "green">G</label>
-            <input type="radio" name="radio" id="color3" >
-            <label for="blue" value = "blue">B</label>
+            <div class="btn1" value = "red">
+                <label for="red">
+                    <input type="radio" name="radio" id="color1" >
+                </label>
+            </div>
+            <div class="btn2" value = "green">
+            <label for="green">
+                <input type="radio" name="radio" id="color2" >
+            </label>
+            </div>
+            <div class="btn3" value = "blue">
+            <label for="blue">
+                <input type="radio" name="radio" id="color3" >
+            </label>
+            </div>
         </div>
         <input type="button" value="Add" id="addButton">
         <table id="list">
